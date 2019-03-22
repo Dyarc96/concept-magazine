@@ -1,0 +1,48 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, .7);
+    position: absolute;
+    top: 0;
+    display: none;
+
+    &__content {
+        width: 60rem;
+        height: 30rem;
+        background-color: $color-white;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__border {
+        border: 1px solid $color-black;
+        width: 58rem;
+        border-radius: .5rem;
+        height: 28rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__log {
+        margin-top: 5rem;
+        align-self: center;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__input {
+        padding: 1rem 2rem;
+        outline: none;
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
+}

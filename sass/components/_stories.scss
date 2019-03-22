@@ -1,0 +1,58 @@
+.stories {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__background {
+    margin-top: 5rem;
+    transform: skewY(-15deg);
+        background-image: linear-gradient(
+            to right top,
+            rgba($color-secondary, .8),
+            rgba($color-primary, .8)), 
+            url(../../img/buildings.jpg);
+
+            & > * {
+                transform: skewY(15deg);
+            }
+            
+    }
+
+    &__box {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        height: 60rem;
+        flex-direction: column;
+        border-top: 5px solid $color-black;
+        margin: 2rem;
+        flex-basis: 50rem;
+        background-color: $color-white;
+        box-shadow: $box-shadow;
+        transition: all 1s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @include respond(phone-small) {
+            height: 70rem;
+        }
+    }
+
+    &__author {
+        margin-bottom: 2.5rem;
+        font-size: 1.7rem;
+        color: $color-tertiary-dark
+    }
+
+    &__img {
+        width: 70%;
+        top: 10rem;
+        margin: 0 auto;
+        height: 20rem;
+    }
+}

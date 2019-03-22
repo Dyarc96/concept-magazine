@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Colus;
+    src: url(./fonts/Colus-Regular.woff);
+}
+
+.heading-primary {
+    font-size: 5.5rem;
+    display: block;
+    font-family: Colus;
+
+    @include respond(desktop-small) {
+        font-size: 4.5rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+}
+
+.paragraph {
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $color-white;
+}
+
+.section-most_popular .paragraph {
+    color: $color-grey;
+}
+
+.right-sidebar {
+    right: 8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+
+    @include respond(phone) {
+        right: 4rem;
+    }
+
+    @include respond(phone-small) {
+        right: 2rem;
+    }
+  
+  
+    &__list {
+      list-style: none;
+    }
+  
+    &__item {
+      font-size: 2rem;
+      color: $color-white;
+      padding-bottom: .6rem;
+    }
+  
+    &__title {
+      font-size: 4rem;
+      color: $color-white;
+      font-family: 'Roboto';
+      padding-bottom: 2rem;
+
+      @include respond(phone) {
+          font-size: 3rem;
+      }
+
+      @include respond(phone-small) {
+          font-size: 2.5rem;
+      }
+    }
+  
+    &__item:not(:first-child) {
+      padding-bottom: .6rem 0;
+    }
+  }
+
+.left-bottom {
+    position: absolute;
+    left: 15rem;
+    bottom: 4rem;
+    font-family: helvetica;
+    letter-spacing: .3rem;
+    color: $color-grey;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+    @include respond(phone) {
+        display: none;
+    }
+  }
+  
+.left-sidebar {
+    left: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 20%;
+
+    @include respond(phone) {
+        left: 3rem;
+    }
+
+    @include respond(phone-small) {
+        left: 1.5rem;
+    }
+  
+  
+    &__title {
+      font-weight: bolder;
+      font-size: 2.5rem;
+    }
+  
+    &__description {
+      font-family: Helvetica, sans-serif;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      width: 20rem;
+    }
+}
+
+.price {
+    font-size: 1.2rem;
+    color: $color-black;
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: bold;
+    background-image: linear-gradient(to right, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    transition: all .6s;
+
+    &:hover {
+        transform: rotate(-5deg);
+    }
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid $color-grey;
+}
+
+.order__side .heading-tertiary {
+    margin: 1rem auto;
+}
+
+.section-most_popular .paragraph {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.section-order .heading-tertiary {
+    margin-top: 0;
+    position: absolute;
+    top: 3rem;
+    font-size: 4rem;
+}
+
+.modal .heading-tertiary {
+    text-align: center;
+    padding: 0 2.5rem 2.5rem 0;
+}
+
+.btn-tertiary {
+    font-size: 2rem;
+}
+
+.right-sidebar {
+    &__title:hover,
+    &__item:hover {
+        color: $color-tertiary;
+        transition: all .5s;
+    }
+}

@@ -1,0 +1,67 @@
+.footer {
+    background-color: $color-black;
+    width: 90vw;
+    margin: 0 auto;
+    height: 40vh;
+    margin-top: -10rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+
+    @include respond(tab-port) {
+        width: 100vw;
+    }
+
+    &__list {
+        position: absolute;
+        bottom: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        &__item {
+            display: inline;
+            position: relative;
+            margin: 1rem;
+            color: $color-white;
+            font-size: 2rem;
+            z-index: 2;
+            transition: color .4s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: .3rem;
+                background-color: $color-white;
+                transform: scaleY(0);
+                z-index: -500;
+                color: $color-black;
+                transition: transform .2s, 
+                            width .4s .2s
+            }
+
+            &:hover::before {
+                transform: scaleY(1);
+                width: 100%;
+                color: $color-black;
+            }
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+}
+
+.logo {
+    height: 15rem;
+
+    &__container {
+        display: flex;
+        position: absolute;
+        top: 7.5rem;
+    }
+}

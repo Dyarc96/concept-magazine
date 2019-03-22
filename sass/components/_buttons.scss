@@ -1,0 +1,61 @@
+.left-sidebar .btn-animated {
+    margin-top: 1rem;
+    padding: 2rem 4rem;
+    background: $color-blackish;
+    border-radius: .5rem;
+    color: $color-white;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    font-family: helvetica;
+    font-weight: bolder;
+    letter-spacing: .4rem;
+}
+
+.btn-primary {
+    font-size: 2rem;
+    padding: 1rem 3.5rem 1rem 3.5rem;
+    background-image: linear-gradient(to right, $color-primary-light 60%, $color-primary-dark);
+    border: none;
+    outline: none;
+    display: block;
+    height: 4rem;
+    text-transform: uppercase;
+    color: $color-white;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+
+    &::before {
+        content: "";
+        background-image: linear-gradient(to bottom, $color-tertiary, $color-tertiary-dark);
+        position: absolute;
+    }
+
+    &:active {
+        -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset;
+        top:5px;
+    }
+    &:active::before{
+        top: -11px;
+        position: absolute;
+        bottom: -5px;
+        content: "";
+    }
+}
+
+.btn-secondary {
+    padding: 1rem 2rem;
+    position: absolute;
+    align-self: center;
+    font-size: 2rem;
+    bottom: 2.5rem;
+    border: none;
+    border-bottom: 1px solid $color-tertiary-dark;
+    outline: none;
+    color: $color-black;
+
+    &:hover {
+        background-color: $color-tertiary-dark;
+        color: $color-white;
+    }
+}

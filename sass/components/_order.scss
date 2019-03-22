@@ -1,0 +1,98 @@
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.order {
+    perspective: 200rem;
+    margin: 10rem;
+    position: relative;
+    
+
+    &__side {
+        box-shadow: $box-shadow;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $color-grey;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: 47rem;
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-image: linear-gradient(to bottom, $color-tertiary, $color-tertiary-dark);
+            transform: rotateY(180deg);
+            position: relative;
+            height: 47rem;
+        }
+    }
+
+    &__photo {
+        width: 90%;
+        height: 15rem;
+
+        &--border-green {
+            margin-top: 3rem;
+            border: 4px solid green;
+            padding: .5rem;
+        }
+
+        &--border-gold {
+            border: 4px solid gold;
+            padding: .5rem;
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+    
+    &__tag-container {
+        top: 25%;
+    }
+
+    &__tag {
+        width: 7.5rem;
+
+        &:not(:first-child) {
+            margin-left: -.9rem;
+        }
+    }
+
+    &__price {
+        font-family: Economica;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    &__amenity-list {
+        list-style: none;
+        position: relative;
+        text-align: left;
+        align-self: flex-start;
+
+        &__item {
+            font-size: 1.7rem;
+            margin: .7rem;
+        }
+
+        &__icon {
+            padding: .5rem;
+        }
+    }
+}

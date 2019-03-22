@@ -1,0 +1,23 @@
+.section-most_popular {
+    background-color: $color-white;
+    padding: 4rem 0 40rem 0;
+    text-align: center;
+
+    @include respond(tab-port) {
+        margin-top: -5rem;
+    }
+}
+
+.main {
+    @include respond(tab-port) {
+        margin-top: 10rem;
+        width: 100%;
+    }
+}
+
+.section-order {
+    background-color: $color-white;
+    margin-top: -20rem;
+    padding-bottom: 30rem;
+    text-align: center;
+}
