@@ -3,6 +3,10 @@
     bottom: 4rem;
     right: 6rem;
 
+    @include respond(phone-small) {
+        right: 3rem;
+    }
+
 
     &__list {
         display: flex;

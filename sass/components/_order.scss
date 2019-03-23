@@ -9,6 +9,9 @@
     margin: 10rem;
     position: relative;
     
+    @include respond(phone) {
+        margin: 5rem;
+    }
 
     &__side {
         box-shadow: $box-shadow;
