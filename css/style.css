@@ -386,7 +386,7 @@ body {
   .stories__background {
     margin-top: 5rem;
     transform: skewY(-15deg);
-    background-image: linear-gradient(to right top, rgba(53, 101, 163, 0.8), rgba(2, 61, 121, 0.8)), url(../../img/buildings.jpg); }
+    background-image: linear-gradient(to right top, rgba(53, 101, 163, 0.8), rgba(2, 61, 121, 0.8)), url(../img/buildings.jpg); }
     .stories__background > * {
       transform: skewY(15deg); }
   .stories__box {
